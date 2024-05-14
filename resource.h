@@ -1,12 +1,10 @@
-#ifndef _RESOURCE_H
-#define _RESOURCE_H
-#include <stdio.h>//printf
-#include <string.h>//strcasecmp,strcpy
-#include <unistd.h>//getpid
-#include <sys/syscall.h>//syscall
-#include "mime.h"
+//资源管理头文件
+#ifndef __RESOURCE_H_
+#define __RESOURCE_H_
+// 搜索资源
+int searchResource(const char* path);
 
-int findtype(const char* path,char* type);
-int processread(const char* path);
+//识别类型
+int identifyType(const char* path,char* type);
 
-#endif
+#endif //__RESOURCE_H_
